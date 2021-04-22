@@ -1,0 +1,10 @@
+<%= h(flash[:notice]) %>
+<%= h(flash[:success]) %>
+
+<%= form_with model: @book,  local:true do |f| %>
+<h2>Title:<%= @book.title %></h2>
+<h2>Body:<%= @book.body %></h2>
+
+<%= link_to "Edit", edit_book_path(@book.id) %>
+<%= link_to "Back", books_path %>
+<% end %>
